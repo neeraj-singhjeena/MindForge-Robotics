@@ -1,0 +1,131 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  z-index: 1000;
+}
+
+/* BRAND */
+.brand {
+  font-size: 22px;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+/* DESKTOP MENU */
+.nav-right {
+  display: flex;
+  gap: 26px;
+}
+
+.nav-right button {
+  background: none;
+  border: none;
+  color: #e5e7eb;
+  font-size: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-right button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #38bdf8;
+  transition: width 0.3s ease;
+}
+
+.nav-right button:hover::after {
+  width: 100%;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  width: 30px;
+  height: 22px;
+  position: relative;
+  cursor: pointer;
+}
+
+.hamburger span {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #e5e7eb;
+  left: 0;
+  transition: all 0.35s ease;
+  border-radius: 2px;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 9px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 18px;
+}
+
+/* HAMBURGER → CROSS */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 9px;
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 9px;
+}
+
+/* MOBILE MENU */
+@media (max-width: 900px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-right {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: #020617;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    padding: 30px 0;
+
+    /* 🔥 smooth animation */
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+  }
+
+  .nav-right.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-right button {
+    font-size: 16px;
+  }
+}

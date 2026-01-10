@@ -1,0 +1,177 @@
+/* ===== HOME LAYOUT ===== */
+.home {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 90px;
+  overflow: hidden;
+  background: #020617;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* ===== LIVE BACKGROUND ===== */
+.bg-animation {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.bg-animation span {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  filter: blur(70px);
+  animation: float 25s linear infinite;
+}
+
+.bg-animation span:nth-child(1) {
+  top: 15%;
+  left: 20%;
+  background: rgba(56, 189, 248, 0.25);
+}
+
+.bg-animation span:nth-child(2) {
+  top: 60%;
+  left: 10%;
+  background: rgba(99, 102, 241, 0.25);
+  animation-duration: 30s;
+}
+
+.bg-animation span:nth-child(3) {
+  top: 35%;
+  left: 70%;
+  background: rgba(14, 165, 233, 0.25);
+  animation-duration: 22s;
+}
+
+.bg-animation span:nth-child(4) {
+  top: 75%;
+  left: 55%;
+  background: rgba(56, 189, 248, 0.2);
+  animation-duration: 28s;
+}
+
+.bg-animation span:nth-child(5) {
+  top: 20%;
+  left: 85%;
+  background: rgba(99, 102, 241, 0.2);
+  animation-duration: 34s;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(120px, -100px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* ===== CONTENT ===== */
+.home-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.home-content h1 {
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 25px;
+}
+
+/* ===== TYPEWRITER ===== */
+.typewriter {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.typewriter span {
+  display: inline-block;
+  color: #38bdf8;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #38bdf8;
+  width: 0;
+  animation: typing 4.5s steps(21, end) infinite,
+             cursor 0.8s infinite;
+}
+
+/* typing letters */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  40% {
+    width: 100%;
+  }
+  60% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+/* cursor blink */
+@keyframes cursor {
+  0% { border-color: transparent; }
+  50% { border-color: #38bdf8; }
+  100% { border-color: transparent; }
+}
+
+/* ===== TEXT ===== */
+.home-content p {
+  font-size: 17px;
+  color: #cbd5f5;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+/* ===== BUTTONS ===== */
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.btn.primary {
+  background: #38bdf8;
+  color: #020617;
+}
+
+.btn.secondary {
+  border: 2px solid #38bdf8;
+  color: #38bdf8;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .home-content h1 {
+    font-size: 30px;
+  }
+
+  .home-content p {
+    font-size: 15px;
+  }
+}

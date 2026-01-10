@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden; /* 🔥 right side white space fix */
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🔥 MOST IMPORTANT FIX */
+html {
+  background-color: #020617;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #020617;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* ROOT */
+#root {
+  min-height: 100vh;
+  background-color: #020617;
+}
+
+/* ALL SECTIONS */
+section {
+  background-color: #020617;
+}

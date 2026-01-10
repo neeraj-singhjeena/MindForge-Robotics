@@ -1,0 +1,135 @@
+/* FLOATING ACTION BUTTON */
+.chatbot-fab {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 64px;
+  height: 64px;
+  background: radial-gradient(circle, #38bdf8, #0ea5e9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3000;
+  box-shadow: 0 0 0 rgba(56, 189, 248, 0.6);
+  animation: pulse 2s infinite;
+}
+
+.chatbot-fab img {
+  width: 34px;
+  height: 34px;
+}
+
+/* pulse effect */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(56, 189, 248, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0);
+  }
+}
+
+/* CHAT WINDOW */
+.chatbot {
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
+  width: 340px;
+  max-height: 500px;
+  background: #020617;
+  border-radius: 14px;
+  border: 1px solid #1e293b;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  pointer-events: none;
+  transition: all 0.35s ease;
+  z-index: 3000;
+}
+
+.chatbot.open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* HEADER */
+.chat-header {
+  padding: 14px;
+  background: #0f172a;
+  color: white;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header span {
+  cursor: pointer;
+}
+
+/* BODY */
+.chat-body {
+  padding: 15px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* MESSAGES */
+.chat-message {
+  max-width: 80%;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.chat-message.bot {
+  background: #1e293b;
+  color: #e5e7eb;
+}
+
+.chat-message.user {
+  background: #38bdf8;
+  color: #020617;
+  margin-left: auto;
+}
+
+/* FOOTER */
+.chat-footer {
+  display: flex;
+  border-top: 1px solid #1e293b;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 12px;
+  background: #020617;
+  border: none;
+  color: white;
+  outline: none;
+}
+
+.chat-footer button {
+  padding: 12px 16px;
+  background: #38bdf8;
+  border: none;
+  cursor: pointer;
+  color: #020617;
+  font-size: 16px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .chatbot {
+    width: 92%;
+    right: 4%;
+  }
+}
