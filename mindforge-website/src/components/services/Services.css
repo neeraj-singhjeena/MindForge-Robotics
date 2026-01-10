@@ -1,24 +1,24 @@
+/* ===== SERVICES ===== */
 .services {
-  width: 100%;
-  min-height: 70vh;
-  padding-top: 90px;
+  min-height: 100vh;
+  padding: 120px 20px 80px;
   background: #020617;
   color: white;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
 .services-container {
-  width: 100%;
   max-width: 1100px;
-  padding: 0 20px;
-  text-align: center;
+  width: 100%;
 }
 
+/* TITLE */
 .services-title {
-  font-size: 36px;
-  margin-bottom: 10px;
+  font-size: 40px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 16px;
 }
 
 .services-title span {
@@ -26,45 +26,80 @@
 }
 
 .services-subtitle {
+  text-align: center;
   font-size: 16px;
   color: #cbd5f5;
-  margin-bottom: 50px;
+  max-width: 800px;
+  margin: 0 auto 50px;
   line-height: 1.6;
 }
 
+/* GRID */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 24px;
 }
 
+/* CARD */
 .service-card {
-  background: linear-gradient(135deg, #0f172a, #020617);
+  background: rgba(15, 23, 42, 0.85);
   border: 1px solid #1e293b;
   border-radius: 12px;
-  padding: 30px;
-  text-align: left;
+  padding: 24px;
   transition: all 0.3s ease;
-}
-
-.service-card h3 {
-  color: #38bdf8;
-  margin-bottom: 15px;
-}
-
-.service-card p {
-  color: #cbd5f5;
-  font-size: 15px;
-  line-height: 1.6;
 }
 
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.25);
 }
 
-@media (max-width: 900px) {
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #38bdf8;
+}
+
+.service-card p {
+  font-size: 14.5px;
+  color: #e5e7eb;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+/* LIST */
+.service-card ul {
+  padding-left: 18px;
+}
+
+.service-card ul li {
+  font-size: 14px;
+  color: #cbd5f5;
+  margin-bottom: 6px;
+}
+
+/* ===== MOBILE ONLY ===== */
+@media (max-width: 768px) {
+  .services {
+    padding-top: 110px;
+  }
+
+  .services-title {
+    font-size: 30px;
+  }
+
+  .services-subtitle {
+    font-size: 14.5px;
+    margin-bottom: 35px;
+  }
+
   .services-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .service-card {
+    padding: 20px;
   }
 }

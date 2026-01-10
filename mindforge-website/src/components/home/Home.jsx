@@ -1,57 +1,12 @@
-// import "./Home.css";
-
-// function Home() {
-//   return (
-//     <section id="home" className="home">
-//       {/* LIVE BACKGROUND */}
-//       <div className="bg-animation">
-//         <span></span>
-//         <span></span>
-//         <span></span>
-//         <span></span>
-//         <span></span>
-//       </div>
-
-//       {/* CONTENT */}
-//       <div className="home-content">
-//         <h1>
-//           Empowering <br />
-//           <span className="typewriter">
-//             <span>Future-Ready Learners</span>
-//           </span>
-//         </h1>
-
-//         <p>
-//           MindForge Robotics is a UDYAM-registered educational support services
-//           enterprise focused on skill development and practical learning through
-//           modern technology.
-//         </p>
-
-//         <div className="home-buttons">
-//           <a href="#courses" className="btn primary">
-//             View Courses
-//           </a>
-//           <a href="#about" className="btn secondary">
-//             About Us
-//           </a>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default Home;
+import { useState } from "react";
 import "./Home.css";
 
 function Home() {
+  const [openDemo, setOpenDemo] = useState(false);
+
   return (
-    <section
-      id="home"
-      className="home"
-      data-aos="fade-in"
-      data-aos-duration="1000"
-    >
-      {/* LIVE BACKGROUND */}
+    <section id="home" className="home">
+      {/* BACKGROUND ANIMATION */}
       <div className="bg-animation">
         <span></span>
         <span></span>
@@ -60,30 +15,72 @@ function Home() {
         <span></span>
       </div>
 
-      {/* CONTENT */}
-      <div className="home-content" data-aos="zoom-in" data-aos-delay="200">
-        <h1 data-aos="fade-up" data-aos-delay="300">
-          Empowering <br />
+      <div className="home-content">
+        <h1>
+          MindForge Robotics <br />
           <span className="typewriter">
-            <span>Future-Ready Learners</span>
+            <span className="type-text">
+              Shaping Young Minds into Future Innovators
+            </span>
           </span>
         </h1>
 
-        <p data-aos="fade-up" data-aos-delay="500">
-          MindForge Robotics is a UDYAM-registered educational support services
-          enterprise focused on skill development and practical learning through
-          modern technology.
+        <p className="home-tagline">
+          Empowering School Students with{" "}
+          <strong>Robotics, AI, IoT & Drone Education</strong> through Hands-On
+          Learning.
         </p>
 
-        <div className="home-buttons" data-aos="fade-up" data-aos-delay="700">
-          <a href="#courses" className="btn primary">
-            View Courses
+        <p className="home-intro">
+          MindForge Robotics is an education-focused technology company
+          delivering practical, future-ready STEM programs in schools.
+        </p>
+
+        {/* HIGHLIGHTS */}
+        <div className="home-highlights">
+          <div className="highlight">🤖 Hands-On Robotics Learning</div>
+          <div className="highlight">🧠 AI & Coding (Basics to Advanced)</div>
+          <div className="highlight">🌐 IoT & Smart Technology Projects</div>
+          <div className="highlight">🚁 Drone Building & Flight Training</div>
+          <div className="highlight">🏫 School Curriculum Integration</div>
+          <div className="highlight">👨‍🏫 Expert Trainers & Mentors</div>
+        </div>
+
+        {/* CTA BUTTONS */}
+        <div className="home-buttons">
+          <a href="#contact" className="btn primary">
+            Partner With Us
           </a>
-          <a href="#about" className="btn secondary">
-            About Us
-          </a>
+
+          <button className="btn secondary" onClick={() => setOpenDemo(true)}>
+            Book a Free Demo
+          </button>
+
+          {/* <a href="/school-proposal.pdf" download className="btn outline">
+            Download School Proposal
+          </a> */}
         </div>
       </div>
+
+      {/* DEMO MODAL */}
+      {openDemo && (
+        <div className="demo-modal">
+          <div className="demo-box">
+            <h3>Book a Free School Demo</h3>
+
+            <input placeholder="School Name" />
+            <input placeholder="Contact Person" />
+            <input placeholder="Phone Number" />
+            <input placeholder="Email Address" />
+
+            <button className="btn primary">Confirm Booking</button>
+
+            <span className="close" onClick={() => setOpenDemo(false)}>
+              ✖
+            </span>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

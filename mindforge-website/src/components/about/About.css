@@ -1,7 +1,7 @@
 .about {
   width: 100%;
   min-height: 80vh;
-  padding: 90px 0;
+  padding: 120px 0 90px; /* navbar gap + breathing space */
   background: #020617;
   color: white;
   display: flex;
@@ -67,6 +67,7 @@
   font-size: 15px;
   color: #cbd5f5;
   line-height: 1.7;
+  margin-bottom: 12px;
 }
 
 /* TABLET */
@@ -83,6 +84,10 @@
 
 /* MOBILE */
 @media (max-width: 600px) {
+  .about {
+    padding-top: 110px;
+  }
+
   .about-text h2 {
     font-size: 30px;
   }

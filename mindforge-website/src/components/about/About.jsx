@@ -1,51 +1,3 @@
-// import "./About.css";
-
-// function About() {
-//   return (
-//     <section id="about" className="about">
-//       <div className="about-container">
-//         {/* LEFT CONTENT */}
-//         <div className="about-text">
-//           <h2>
-//             About <span>MindForge Robotics</span>
-//           </h2>
-
-//           <p>
-//             MindForge Robotics is a UDYAM-registered micro enterprise providing
-//             educational support services with a strong focus on skill
-//             development, structured learning, and practical training in emerging
-//             technologies.
-//           </p>
-
-//           <p>
-//             Founded in 2026 and based in Punjab, India, our mission is to bridge
-//             the gap between academic education and industry-oriented skills
-//             through hands-on learning, mentorship, and real-world exposure.
-//           </p>
-
-//           <ul>
-//             <li>✔ UDYAM Registered (MSME)</li>
-//             <li>✔ Educational Support Services (NIC 85500)</li>
-//             <li>✔ Skill Development & Practical Training</li>
-//             <li>✔ Career-Oriented Learning Programs</li>
-//           </ul>
-//         </div>
-
-//         {/* RIGHT CARD */}
-//         <div className="about-box">
-//           <h3>Our Objective</h3>
-//           <p>
-//             To empower learners by delivering high-quality educational support,
-//             practical exposure, and skill-based training that enhances
-//             employability, confidence, and technical competence.
-//           </p>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default About;
 import "./About.css";
 
 function About() {
@@ -64,30 +16,35 @@ function About() {
           </h2>
 
           <p data-aos="fade-up" data-aos-delay="400">
-            MindForge Robotics is a UDYAM-registered micro enterprise providing
-            educational support services with a strong focus on skill
-            development, structured learning, and practical training in emerging
-            technologies.
+            MindForge Robotics is a next-generation{" "}
+            <strong>STEM education company</strong> dedicated to transforming
+            how students learn technology. We believe that innovation begins
+            with curiosity, and our mission is to turn students from{" "}
+            <strong>technology users into technology creators</strong>.
           </p>
 
           <p data-aos="fade-up" data-aos-delay="500">
-            Founded in 2026 and based in Punjab, India, our mission is to bridge
-            the gap between academic education and industry-oriented skills
-            through hands-on learning, mentorship, and real-world exposure.
+            Founded with a vision to bridge the gap between school education and
+            real-world technology, MindForge Robotics delivers industry-relevant
+            programs in <strong>Robotics, AI, IoT, and Drone Technology</strong>{" "}
+            directly within schools.
           </p>
 
           <ul>
             <li data-aos="fade-up" data-aos-delay="600">
-              ✔ UDYAM Registered (MSME)
+              ✔ Hands-On Learning Approach
             </li>
             <li data-aos="fade-up" data-aos-delay="700">
-              ✔ Educational Support Services (NIC 85500)
+              ✔ Industry-Experienced Trainers
             </li>
             <li data-aos="fade-up" data-aos-delay="800">
-              ✔ Skill Development & Practical Training
+              ✔ Age-Appropriate Curriculum
             </li>
             <li data-aos="fade-up" data-aos-delay="900">
-              ✔ Career-Oriented Learning Programs
+              ✔ Project-Based & Innovation-Focused Learning
+            </li>
+            <li data-aos="fade-up" data-aos-delay="1000">
+              ✔ Aligned with NEP & Future Skills
             </li>
           </ul>
         </div>
@@ -95,12 +52,25 @@ function About() {
         {/* RIGHT CARD */}
         <div className="about-box" data-aos="fade-left" data-aos-delay="300">
           <h3 data-aos="zoom-in" data-aos-delay="400">
-            Our Objective
+            Our Mission & Vision
           </h3>
+
           <p data-aos="fade-up" data-aos-delay="500">
-            To empower learners by delivering high-quality educational support,
-            practical exposure, and skill-based training that enhances
-            employability, confidence, and technical competence.
+            <strong>Mission:</strong> To empower students with practical
+            technology skills, creativity, and critical thinking required for
+            future careers.
+          </p>
+
+          <p data-aos="fade-up" data-aos-delay="600">
+            <strong>Vision:</strong> To build a generation of innovators,
+            engineers, and problem solvers prepared for the challenges of
+            tomorrow.
+          </p>
+
+          <p data-aos="fade-up" data-aos-delay="700">
+            <strong>Teaching Philosophy:</strong> We believe students learn best
+            by doing, experimenting, and building through curiosity, teamwork,
+            and real-life applications.
           </p>
         </div>
       </div>
