@@ -1,130 +1,136 @@
 .contact {
-  width: 100%;
-  min-height: 90vh;
-  padding: 120px 0 90px;
   background: #020617;
+  padding: 120px 0 180px;
   color: white;
-  display: flex;
-  justify-content: center;
+  position: relative;
+  height: 900px;
 }
 
-/* CONTAINER */
-.contact-container {
-  width: 100%;
-  max-width: 1100px;
+/* ===== INFO CARDS ===== */
+.contact-cards {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.contact-card {
+  background: linear-gradient(135deg, #0f172a, #020617);
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 28px 20px;
+  text-align: center;
+  transition: 0.35s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 40px rgba(56, 189, 248, 0.25);
+  border-color: #38bdf8;
+}
+
+.contact-card span {
+  font-size: 34px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.contact-card h4 {
+  color: #38bdf8;
+  margin-bottom: 8px;
+}
+
+.contact-card p {
+  font-size: 14.5px;
+  color: #cbd5f5;
+}
+
+/* ===== MAP ===== */
+.contact-map {
+  max-width: 1200px;
+  margin: auto;
   padding: 0 20px;
 }
 
-/* TITLE */
-.contact-title {
-  font-size: 40px;
-  font-weight: 800;
+.contact-map iframe {
+  width: 100%;
+  height: 330px;
+  border-radius: 18px;
+  border: 1px solid #1e293b;
+}
+
+/* ===== FLOATING CTA ===== */
+.contact-floating-cta {
+  max-width: 900px;
+  margin: -110px auto 0;
+  padding: 44px 30px;
   text-align: center;
-  margin-bottom: 16px;
-}
-
-.contact-title span {
-  color: #38bdf8;
-}
-
-.contact-subtitle {
-  text-align: center;
-  font-size: 16px;
-  color: #cbd5f5;
-  margin-bottom: 60px;
-}
-
-/* WRAPPER */
-.contact-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: flex-start;
-}
-
-/* LEFT INFO */
-.contact-info h3 {
-  font-size: 22px;
-  color: #38bdf8;
-  margin-bottom: 18px;
-}
-
-.contact-info p {
-  font-size: 15px;
-  color: #e5e7eb;
-  margin-bottom: 10px;
-  line-height: 1.6;
-}
-
-.contact-note {
-  margin-top: 20px;
-  font-size: 14.5px;
-  color: #cbd5f5;
-}
-
-/* FORM */
-.contact-form {
   background: linear-gradient(135deg, #0f172a, #020617);
   border: 1px solid #1e293b;
-  border-radius: 14px;
-  padding: 30px;
+  border-radius: 22px;
+  position: relative;
+  z-index: 10;
+  animation: floatCta 4s ease-in-out infinite;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  margin-bottom: 14px;
-  padding: 12px 14px;
-  background: #020617;
-  border: 1px solid #1e293b;
-  border-radius: 6px;
-  color: white;
-  font-size: 14.5px;
+@keyframes floatCta {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
 }
 
-.contact-form textarea {
-  resize: none;
+.contact-floating-cta h2 {
+  font-size: 30px;
+  margin-bottom: 26px;
 }
 
-.contact-form button {
-  width: 100%;
-  padding: 14px;
+.contact-floating-cta button {
   background: #38bdf8;
   color: #020617;
+  padding: 14px 30px;
+  border-radius: 999px;
   font-weight: 600;
   border: none;
-  border-radius: 6px;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.15s ease;
 }
 
-.contact-form button:hover {
-  background: #0ea5e9;
+.contact-floating-cta button:active {
+  transform: scale(0.96);
 }
 
-/* TABLET */
+.contact-floating-cta span {
+  background: white;
+  color: #020617;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== MOBILE ===== */
 @media (max-width: 900px) {
-  .contact-wrapper {
+  .contact-cards {
     grid-template-columns: 1fr;
-    gap: 40px;
-  }
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-  .contact {
-    padding-top: 110px;
+    
   }
 
-  .contact-title {
-    font-size: 30px;
+  .contact-map iframe {
+    height: 220px;
   }
 
-  .contact-subtitle {
-    font-size: 14.5px;
-    margin-bottom: 40px;
+  .contact-floating-cta {
+    margin-top: -60px;
   }
 
-  .contact-info p {
-    font-size: 14.5px;
+  .contact-floating-cta h2 {
+    font-size: 22px;
   }
 }

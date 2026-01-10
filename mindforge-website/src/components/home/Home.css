@@ -1,7 +1,7 @@
-/* ===== HOME ===== */
+/* ================= HOME ================= */
 .home {
   min-height: 100vh;
-  padding-top: 130px; /* navbar gap FIX */
+  padding-top: 80px; /* navbar gap */
   background: #020617;
   color: white;
   position: relative;
@@ -10,23 +10,24 @@
   justify-content: center;
 }
 
-/* ===== BACKGROUND ANIMATION ===== */
+/* ========== BACKGROUND ANIMATION ========== */
 .bg-animation span {
   position: absolute;
-  width: 240px;
-  height: 240px;
+  width: 260px;
+  height: 260px;
   border-radius: 50%;
-  filter: blur(90px);
+  filter: blur(100px);
   background: rgba(56, 189, 248, 0.25);
   animation: float 30s infinite;
 }
 
 .bg-animation span:nth-child(2) {
-  top: 50%;
+  top: 45%;
   left: 70%;
 }
+
 .bg-animation span:nth-child(3) {
-  top: 75%;
+  top: 70%;
   left: 20%;
 }
 
@@ -36,96 +37,51 @@
   }
 }
 
-/* ===== CONTENT ===== */
-.home-content {
-  max-width: 1100px;
-  text-align: center;
+/* ========== MAIN LAYOUT ========== */
+.home-layout {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 60px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
   z-index: 2;
-  padding: 0 20px;
+}
+
+/* ========== LEFT CONTENT ========== */
+.home-content {
+  text-align: left;
+  max-width: 720px;
 }
 
 .home-content h1 {
   font-size: 46px;
   font-weight: 800;
-  margin-bottom: 18px;
+  line-height: 1.25;
+  margin-bottom: 14px;
 }
 
-/* ===== TYPEWRITER (LETTER BY LETTER) ===== */
-.typewriter {
-  display: inline-block;
-}
+/* TYPEWRITER */
+/* ===== TYPEWRITER (FIXED & RESPONSIVE) ===== */
+/* ===== TYPEWRITER (2 LINE SAFE) ===== */
+
+
+
 
 .type-text {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 3px solid #38bdf8;
-  padding-right: 6px;
+ 
+  
+  
+  /* border-right: 3px solid #38bdf8;
+  padding-right: 6px; */
   color: #38bdf8;
-  animation: typing 4.5s steps(44, end) infinite,
-             blink 0.8s step-end infinite;
+
+  
 }
 
-@keyframes typing {
-  0% {
-    width: 0;
-  }
-  60% {
-    width: 100%;
-  }
-  100% {
-    width: 100%;
-  }
-}
 
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
 
-/* ===== TEXT ===== */
-.home-tagline {
-  font-size: 18px;
-  color: #cbd5f5;
-  margin-bottom: 20px;
-}
-
-.home-intro {
-  font-size: 16px;
-  color: #e5e7eb;
-  line-height: 1.7;
-  margin-bottom: 35px;
-}
-
-/* ===== HIGHLIGHTS (DESKTOP SAME) ===== */
-.home-highlights {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin: 40px 0;
-}
-
-.highlight {
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid #1e293b;
-  padding: 14px;
-  border-radius: 8px;
-  transition: 0.3s ease;
-}
-
-.highlight:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.25);
-}
-
-/* ===== BUTTONS ===== */
-.home-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-}
-
+/* ========== BUTTON STYLES ========== */
 .btn {
   padding: 14px 28px;
   border-radius: 6px;
@@ -136,7 +92,7 @@
 
 .btn.primary {
   background: #38bdf8;
-  color: #020617;
+  color: #020617; margin-right: 20px;
 }
 
 .btn.secondary {
@@ -145,13 +101,25 @@
   color: #38bdf8;
 }
 
-.btn.outline {
-  background: transparent;
-  border: 2px solid #64748b;
-  color: #e5e7eb;
+/* ========== RIGHT IMAGE ========== */
+.home-image {
+  display: flex;
+  justify-content: flex-end;
 }
 
-/* ===== MODAL ===== */
+.home-image img {
+  width: 100%;
+  max-width: 380px;
+  animation: floatRobot 4s ease-in-out infinite;
+}
+
+@keyframes floatRobot {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+/* ========== MODAL ========== */
 .demo-modal {
   position: fixed;
   inset: 0;
@@ -187,39 +155,20 @@
   cursor: pointer;
 }
 
-/* ===== MOBILE ONLY ===== */
-@media (max-width: 768px) {
-  .home {
-    padding-top: 110px;
-  }
-
-  .home-content h1 {
-    font-size: 30px;
-    line-height: 1.3;
-  }
-
+/* ========== MOBILE ========== */
+@media (max-width: 600px) {
   .type-text {
     font-size: 22px;
+    animation: typingMobile 2.2s steps(22, end) forwards,
+               blink 0.8s step-end infinite;
   }
 
-  .home-tagline {
-    font-size: 15px;
-  }
-
-  .home-intro {
-    font-size: 14.5px;
-  }
-
-  .home-highlights {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .home-buttons {
-    flex-direction: column;
-  }
-
-  .btn {
-    width: 100%;
+  @keyframes typingMobile {
+    from {
+      width: 0;
+    }
+    to {
+      width: 22ch;
+    }
   }
 }
