@@ -156,19 +156,83 @@
 }
 
 /* ========== MOBILE ========== */
+/* ========== MOBILE FIX ONLY ========== */
+/* ================= MOBILE FIX (FINAL) ================= */
 @media (max-width: 600px) {
-  .type-text {
-    font-size: 22px;
-    animation: typingMobile 2.2s steps(22, end) forwards,
-               blink 0.8s step-end infinite;
+
+  /* SECTION SPACING */
+  .home {
+    padding-top: 110px;
   }
 
-  @keyframes typingMobile {
-    from {
-      width: 0;
-    }
-    to {
-      width: 22ch;
-    }
+  /* MAIN GRID */
+  .home-layout {
+    grid-template-columns: 1fr;
+    padding: 0 18px;
+    text-align: center;
+  }
+
+  /* CONTENT */
+  .home-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .home-content h1 {
+    font-size: 28px;
+    line-height: 1.35;
+    margin-bottom: 12px;
+  }
+
+  /* TYPE TEXT — FULLY VISIBLE */
+  .type-text {
+    font-size: 22px;
+    color: #38bdf8;
+    white-space: normal;   /* ❌ cut band */
+    animation: none;       /* ❌ mobile animation off */
+  }
+
+  /* TAGLINE */
+  .home-tagline {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  .home-intro {
+    font-size: 14.5px;
+    line-height: 1.6;
+    margin-bottom: 22px;
+  }
+
+  /* ===== BUTTON FIX ===== */
+  .home-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .home-buttons .btn {
+    width: 100%;
+    max-width: 280px;
+    padding: 13px 0;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .btn.primary {
+    margin-right: 0; /* 🔥 desktop margin hata diya */
+  }
+
+  /* IMAGE */
+  .home-image {
+    justify-content: center;
+    margin-top: 28px;
+  }
+
+  .home-image img {
+    max-width: 220px;
   }
 }
