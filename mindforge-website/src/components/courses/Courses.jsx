@@ -63,36 +63,29 @@ function Courses() {
         </h2>
 
         <p className="courses-subtitle" data-aos="fade-up" data-aos-delay="350">
-          Career-focused educational programs designed under our educational
-          support services framework.
+          Career-focused educational programs designed to build strong
+          foundations and future-ready skills.
         </p>
 
         <div className="courses-grid">
+          {/* COURSE 1 */}
           <div className="course-card" data-aos="flip-up" data-aos-delay="200">
             <h3>Robotics & Automation</h3>
             <p>
-              Fundamentals of robotics, sensors, automation systems, and
-              hands-on robotics projects.
+              Learn robotics fundamentals including sensors, motors,
+              microcontrollers, and automation through hands-on projects.
             </p>
-            <span className="duration">Duration: 3 Months</span>
+            <span className="duration">⏱ Duration: 3 Months</span>
           </div>
 
+          {/* COURSE 2 */}
           <div className="course-card" data-aos="flip-up" data-aos-delay="350">
             <h3>Artificial Intelligence</h3>
             <p>
-              Core concepts of AI, machine learning basics, and practical
-              applications in real-world scenarios.
+              Introduction to AI concepts, logical thinking, machine learning
+              basics, and real-world applications.
             </p>
-            <span className="duration">Duration: 4 Months</span>
-          </div>
-
-          <div className="course-card" data-aos="flip-up" data-aos-delay="500">
-            <h3>Web & Software Development</h3>
-            <p>
-              Frontend and backend development using modern tools, with
-              project-based learning.
-            </p>
-            <span className="duration">Duration: 6 Months</span>
+            <span className="duration">⏱ Duration: 3 Months</span>
           </div>
         </div>
       </div>

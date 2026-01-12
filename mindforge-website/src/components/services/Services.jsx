@@ -9,103 +9,99 @@ function Services() {
       data-aos-duration="900"
     >
       <div className="services-container">
-        <h2 className="services-title" data-aos="fade-up" data-aos-delay="200">
+        <h2 className="services-title" data-aos="fade-up">
           Our <span>Services</span>
         </h2>
 
         <p
           className="services-subtitle"
           data-aos="fade-up"
-          data-aos-delay="300"
+          data-aos-delay="200"
         >
-          MindForge Robotics delivers structured, practical, and future-ready
-          STEM education programs designed specially for school students.
+          Structured, practical, and future-ready STEM education services
+          designed for modern schools.
         </p>
 
         <div className="services-grid">
-          {/* Robotics */}
-          <div className="service-card" data-aos="fade-up" data-aos-delay="400">
-            <h3>🤖 Robotics Education</h3>
-            <p>
-              Structured robotics programs where students design, build, and
-              program robots using sensors, motors, and microcontrollers.
-            </p>
-            <ul>
-              <li>Beginner to Advanced Levels</li>
-              <li>Age-wise Curriculum (Class 3–12)</li>
-              <li>Real-World Problem Solving</li>
-            </ul>
+          {/* CARD 1 */}
+          <div className="service-card" data-aos="fade-up">
+            <div className="service-image">
+              {/* YAHAN APNI IMAGE LAGANA */}
+              <img src="/images/robotics.jpg" alt="Robotics Education" />
+            </div>
+
+            <div className="service-content">
+              <h3>Robotics Education</h3>
+              <p>
+                Hands-on robotics programs where students design, build, and
+                program robots using sensors and controllers.
+              </p>
+              <ul>
+                <li>Beginner to Advanced Levels</li>
+                <li>Age-wise Curriculum (Class 3–12)</li>
+                <li>Real-World Problem Solving</li>
+              </ul>
+            </div>
           </div>
 
-          {/* AI */}
-          <div className="service-card" data-aos="fade-up" data-aos-delay="500">
-            <h3>🧠 Artificial Intelligence (AI) & Coding</h3>
-            <p>
-              Simplified and engaging AI programs focused on logical thinking,
-              coding, and machine learning fundamentals.
-            </p>
-            <ul>
-              <li>Block Coding & Python</li>
-              <li>AI Concepts (Vision, Automation, Chatbots)</li>
-              <li>Creativity + Logic Development</li>
-            </ul>
+          {/* CARD 2 */}
+          <div className="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div className="service-image">
+              <img src="/images/ai.jpg" alt="AI & Coding" />
+            </div>
+
+            <div className="service-content">
+              <h3>Artificial Intelligence & Coding</h3>
+              <p>
+                Simplified AI and coding programs focused on logic, creativity,
+                and problem-solving skills.
+              </p>
+              <ul>
+                <li>Block Coding & Python</li>
+                <li>AI Concepts & Automation</li>
+                <li>Logical Thinking Development</li>
+              </ul>
+            </div>
           </div>
 
-          {/* IoT */}
-          <div className="service-card" data-aos="fade-up" data-aos-delay="600">
-            <h3>🌐 Internet of Things (IoT)</h3>
-            <p>
-              Students explore how smart devices communicate and work together
-              to solve real-life problems.
-            </p>
-            <ul>
-              <li>Smart Home & Smart City Projects</li>
-              <li>Sensor-Based Automation</li>
-              <li>Industry-Relevant Skills</li>
-            </ul>
+          {/* CARD 3 */}
+          <div className="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div className="service-image">
+              <img src="/images/iot.jpg" alt="IoT & Smart Tech" />
+            </div>
+
+            <div className="service-content">
+              <h3>IoT & Smart Technology</h3>
+              <p>
+                Learn how smart devices communicate and automate real-life
+                solutions using IoT technologies.
+              </p>
+              <ul>
+                <li>Smart Home & Smart City Projects</li>
+                <li>Sensor-Based Automation</li>
+                <li>Industry-Relevant Skills</li>
+              </ul>
+            </div>
           </div>
 
-          {/* Drone */}
-          <div className="service-card" data-aos="fade-up" data-aos-delay="700">
-            <h3>🚁 Drone Technology</h3>
-            <p>
-              From building to flying, our drone programs inspire innovation and
-              technical confidence.
-            </p>
-            <ul>
-              <li>Drone Assembly & Components</li>
-              <li>Flight Training & Safety</li>
-              <li>Applications in Agriculture, Defense & Mapping</li>
-            </ul>
-          </div>
+          {/* CARD 4 */}
+          <div className="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div className="service-image">
+              <img src="/images/drone.jpg" alt="Drone Technology" />
+            </div>
 
-          {/* Lab */}
-          <div className="service-card" data-aos="fade-up" data-aos-delay="800">
-            <h3>🏫 School Lab Setup & Curriculum Support</h3>
-            <p>
-              We help schools establish Robotics & Innovation Labs aligned with
-              NEP and CBSE/ICSE guidelines.
-            </p>
-            <ul>
-              <li>Complete Lab Setup</li>
-              <li>Teacher Training</li>
-              <li>Annual Academic Plans</li>
-            </ul>
-          </div>
-
-          {/* Workshops */}
-          <div className="service-card" data-aos="fade-up" data-aos-delay="900">
-            <h3>🏆 Workshops & Innovation Programs</h3>
-            <p>
-              Hands-on workshops and competitions that promote creativity,
-              teamwork, and innovation.
-            </p>
-            <ul>
-              <li>Robotics Workshops</li>
-              <li>STEM Bootcamps</li>
-              <li>Inter-School Competitions</li>
-              <li>Science Fair Project Support</li>
-            </ul>
+            <div className="service-content">
+              <h3>Drone Technology</h3>
+              <p>
+                Drone assembly, flight training, and applications that build
+                technical confidence and innovation.
+              </p>
+              <ul>
+                <li>Drone Assembly & Components</li>
+                <li>Flight Training & Safety</li>
+                <li>Industrial Applications</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
