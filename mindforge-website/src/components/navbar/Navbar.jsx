@@ -16,7 +16,7 @@ function Navbar() {
     <nav className="navbar">
       {/* LEFT */}
       <div className="nav-left">
-        <span className="brand">MindForge</span>
+        <span className="brand">Mindforge Robotic</span>
       </div>
 
       {/* HAMBURGER */}
