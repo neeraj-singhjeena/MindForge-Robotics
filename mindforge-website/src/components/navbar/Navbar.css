@@ -134,7 +134,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  min-height: 60px;              /* 🔥 logo ke hisaab se */
+  min-height: 70px;              /* 🔥 logo ke hisaab se */
   background: #0f172a;
   display: flex;
   align-items: center;
@@ -151,7 +151,7 @@
 }
 
 .nav-logo {
-  height: 53px;                  /* 🔥 tumhari desired height */
+  height: 50px;                  /* 🔥 tumhari desired height */
   width: auto;
   object-fit: contain;
 }
@@ -261,7 +261,7 @@
 
   /* MOBILE LOGO CONTROL */
   .nav-logo {
-    height: 70px;     
+    height: 45px;     
     
            /* 🔥 mobile friendly */
   }
