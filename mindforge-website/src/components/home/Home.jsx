@@ -32,12 +32,9 @@ function Home() {
           <p className="home-tagline">
             Empowering School Students with{" "}
             <strong>Robotics, AI, IoT & Drone Education</strong> through
-            Hands-On Learning.
-          </p>
-
-          <p className="home-intro">
-            MindForge Robotics is an education-focused technology company
-            delivering practical, future-ready STEM programs in schools.
+            Hands-On Learning. MindForge Robotics is an education-focused
+            technology company delivering practical, future-ready STEM programs
+            in schools.
           </p>
 
           {/* CTA BUTTONS */}
